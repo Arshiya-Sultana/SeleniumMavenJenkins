@@ -9,14 +9,14 @@ import org.testng.annotations.Test;
 
 public class HandleSeleniumTest {
 	
+	String projectPath = System.getProperty("user.dir");
+	String chromeDriverPath = System.setProperty("webdriver.chrome.driver", projectPath + "\\drivers\\chromedriver.exe");
 	String url = "https://parabank.parasoft.com/parabank/index.htm";
 	
   @Test
   public void test01() throws InterruptedException {
 	  
 		
-		String projectPath = System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", projectPath + "\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
 		
